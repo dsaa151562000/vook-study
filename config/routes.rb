@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  #管理画面
+  namespace :admin do
+    root to: 'home#index'
+  end
   resources :news
   #devise_for :users
   # devise_for :users, controllers: {
