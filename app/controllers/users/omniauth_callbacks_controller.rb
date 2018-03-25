@@ -1,4 +1,4 @@
-class OmniauthCallbacksController < ApplicationController
+class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def doorkeeper # メソッド名はstrategyで指定した名前
     #binding.pry
     @user = User.find_or_create_with_doorkeeper(request.env['omniauth.auth'])
@@ -12,6 +12,5 @@ class OmniauthCallbacksController < ApplicationController
       redirect_to root_url, alert: 'Doorkeeper ログインに失敗しました'
     end
   end
-
 
 end

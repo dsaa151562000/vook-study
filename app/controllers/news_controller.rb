@@ -1,4 +1,6 @@
 class NewsController < ApplicationController
+  #before_filter :basic
+  before_action :basic
   before_action :authenticate_user!
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
@@ -72,4 +74,5 @@ class NewsController < ApplicationController
     def news_params
       params.require(:news).permit(:title, :image, :content)
     end
+
 end
