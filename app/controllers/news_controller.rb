@@ -19,6 +19,8 @@ class NewsController < ApplicationController
   # GET /news/new
   def new
     @news = News.new
+
+    
   end
 
   # GET /news/1/edit
