@@ -9,5 +9,7 @@ class ApplicationController < ActionController::Base
     authenticate_or_request_with_http_basic do |user, pass|
       user == 'user' && pass == 'pass'
     end
+    
+    
   end
 end
