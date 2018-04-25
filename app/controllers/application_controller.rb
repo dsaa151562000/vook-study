@@ -10,4 +10,6 @@ class ApplicationController < ActionController::Base
       user == 'user' && pass == 'pass'
     end
   end
+
+  
 end
