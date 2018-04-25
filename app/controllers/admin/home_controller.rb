@@ -2,6 +2,8 @@ class Admin::HomeController < ApplicationController
   before_action :basic, only: :index
 
   def index
+
+  	
   end
 
   private
