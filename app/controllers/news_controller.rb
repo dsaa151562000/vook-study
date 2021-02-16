@@ -3,11 +3,11 @@ class NewsController < ApplicationController
   #before_action :basic
   before_action :authenticate_user!
   before_action :set_news, only: [:show, :edit, :update, :destroy]
-  
 
   # GET /news
   # GET /news.json
   def index
+    
     @news = News.all
   end
 
@@ -19,6 +19,8 @@ class NewsController < ApplicationController
   # GET /news/new
   def new
     @news = News.new
+
+    
   end
 
   # GET /news/1/edit

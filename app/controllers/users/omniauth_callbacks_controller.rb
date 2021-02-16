@@ -12,5 +12,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to root_url, alert: 'Doorkeeper ログインに失敗しました'
     end
   end
+  
 
 end
